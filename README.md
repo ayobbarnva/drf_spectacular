@@ -100,7 +100,7 @@ Use the returned `access` token in the `Authorization` header for authenticated 
 ```
 Authorization: Bearer <your_access_token>
 ```
-
+site: **https://www.django-rest-framework.org/**
 ## 📄 License
 
 This project is open source and available for personal and educational use.
