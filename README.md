@@ -1,106 +1,138 @@
 # 🚀 drf_spectacular
 
+> یک RESTful API ساخته‌شده با Django و Django REST Framework، با Custom User، احراز هویت JWT و مستندسازی تعاملی API.
+
 ![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-4.2-092E20?style=for-the-badge&logo=django&logoColor=white)
-![DRF](https://img.shields.io/badge/DRF-REST%20Framework-ff1709?style=for-the-badge&logo=django&logoColor=white)
-![JWT](https://img.shields.io/badge/Auth-JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
-![Swagger](https://img.shields.io/badge/Docs-Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
-![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)
+![DRF](https://img.shields.io/badge/DRF-REST%20Framework-ff1709?style=for-the-badge)
+![JWT](https://img.shields.io/badge/Auth-JWT-000000?style=for-the-badge)
+![Swagger](https://img.shields.io/badge/Docs-Swagger-85EA2D?style=for-the-badge)
 
-A RESTful API built with **Django** and **Django REST Framework (DRF)**, featuring a custom user model, JWT-based authentication, and auto-generated interactive API documentation.
+---
 
-## ✨ Features
+## ✨ درباره پروژه
 
-- **Custom User Model** — extends `AbstractBaseUser` for flexible, project-specific authentication
-- **JWT Authentication** — secure token-based auth powered by `djangorestframework-simplejwt`
-- **Articles & Comments** — CRUD endpoints for articles and their comments
-- **Ads Module** — endpoints for managing advertisement listings with pagination
-- **Auto-generated API Schema** — OpenAPI 3.0 schema generated automatically with `drf-spectacular`
-- **Interactive Swagger UI** — browse and test all endpoints directly from the browser
+این پروژه یک REST API با Django و Django REST Framework است که برای تمرین و پیاده‌سازی مفاهیم واقعی توسعه Backend ساخته شده است.
 
-## 🛠️ Tech Stack
+در پروژه مفاهیمی مانند Custom User، احراز هویت JWT، CRUD، Pagination، مدیریت Article و Comment، مدیریت Advertisement و مستندسازی خودکار API پیاده‌سازی شده‌اند.
 
-| Component | Technology |
+## 🔥 امکانات
+
+- 👤 Custom User Model
+- 🔐 احراز هویت JWT
+- 📝 مدیریت Article
+- 💬 مدیریت Comment
+- 📢 مدیریت Advertisement
+- 📄 Pagination
+- 🔄 عملیات CRUD
+- 📚 تولید خودکار OpenAPI Schema
+- 🧭 Swagger UI برای مشاهده و تست API
+- 🛡️ Authentication و Permission
+
+## 🧰 تکنولوژی‌ها
+
+| تکنولوژی | کاربرد |
 |---|---|
-| Language | Python 3.13 |
-| Framework | Django 4.2 |
-| API | Django REST Framework |
-| Auth | djangorestframework-simplejwt |
-| API Docs | drf-spectacular (OpenAPI 3.0) |
-| Database | SQLite (development) |
+| 🐍 Python 3.13 | زبان برنامه‌نویسی |
+| 🎯 Django 4.2 | Backend Framework |
+| 🔌 Django REST Framework | ساخت REST API |
+| 🔐 Simple JWT | احراز هویت |
+| 📚 drf-spectacular | مستندسازی OpenAPI 3.0 |
+| 🧪 Swagger UI | مشاهده و تست API |
+| 🗄️ SQLite | پایگاه داده توسعه |
 
-## 📖 API Documentation
+## 📖 مستندات API
 
-This project uses `drf-spectacular` to automatically generate an OpenAPI 3.0 schema directly from the codebase — no manual documentation needed. Interactive docs are available out of the box:
+پس از اجرای پروژه، مستندات تعاملی API در دسترس هستند:
 
-- **Schema (raw)**: `/schema/`
-- **Swagger UI**: `/swagger/`
+```text
+/schema/
+```
 
-## ⚡ Getting Started
+و:
 
-### 1. Clone the repository
+```text
+/swagger/
+```
+
+## ⚙️ نصب و اجرا
 
 ```bash
 git clone https://github.com/ayobbarnva/drf_spectacular.git
 cd drf_spectacular
 ```
 
-### 2. Create a virtual environment and install dependencies
+ساخت محیط مجازی:
 
 ```bash
 python -m venv venv
-source venv/bin/activate   # on Windows: venv\Scripts\activate
+source venv/bin/activate
+```
+
+نصب وابستگی‌ها:
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 3. Set up environment variables
-
-Create a `.env` file in the project root:
-
-```
-SECRET_KEY=your-secret-key-here
-DEBUG=True
-```
-
-### 4. Apply migrations
+ساخت و اجرای Migration:
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 5. Create a superuser
+ساخت Superuser:
 
 ```bash
 python manage.py createsuperuser
 ```
 
-### 6. Run the development server
+اجرای سرور:
 
 ```bash
 python manage.py runserver
 ```
 
-The API will be available at `http://127.0.0.1:8000/`, with interactive docs at `http://127.0.0.1:8000/swagger/`.
+سپس API در آدرس زیر در دسترس خواهد بود:
 
-## 🔐 Authentication
-
-This project uses JWT authentication. To obtain a token:
-
+```text
+http://127.0.0.1:8000/
 ```
+
+## 🔐 احراز هویت JWT
+
+برای دریافت Token:
+
+```http
 POST /api/token/
+```
+
+نمونه درخواست:
+
+```json
 {
     "username": "your_username",
     "password": "your_password"
 }
 ```
 
-Use the returned `access` token in the `Authorization` header for authenticated requests:
+سپس Access Token را در Header ارسال کنید:
 
-```
+```http
 Authorization: Bearer <your_access_token>
 ```
-love you : **https://www.django-rest-framework.org/**
-## 📄 License
 
-This project is open source and available for personal and educational use.
+## 🎯 هدف پروژه
+
+هدف پروژه، تمرین توسعه Backend، طراحی REST API، Authentication، Serializer، CRUD، Pagination و مستندسازی API با Django REST Framework است.
+
+## 👨‍💻 سازنده
+
+**Ayoob Barnva** — [@ayobbarnva](https://github.com/ayobbarnva)
+
+⭐ اگر پروژه برایتان مفید بود، می‌توانید به Repository Star بدهید.
+
+## ⚠️ توجه
+
+این پروژه با هدف آموزشی و توسعه Backend ساخته شده است.
