@@ -1,6 +1,6 @@
 # 🚀 drf_spectacular
 
-> یک RESTful API ساخته‌شده با Django و Django REST Framework، با Custom User، احراز هویت JWT و مستندسازی تعاملی API.
+> A RESTful API built with Django and Django REST Framework, featuring a custom user model, JWT authentication, and interactive API documentation.
 
 ![Python](https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django-4.2-092E20?style=for-the-badge&logo=django&logoColor=white)
@@ -8,30 +8,29 @@
 ![JWT](https://img.shields.io/badge/Auth-JWT-000000?style=for-the-badge)
 ![Swagger](https://img.shields.io/badge/Docs-Swagger-85EA2D?style=for-the-badge)
 
----
+## ✨ About
 
-## ✨ درباره پروژه
+A Django REST API project focused on backend development, authentication, CRUD operations, pagination, and automatic OpenAPI documentation.
 
-این پروژه یک REST API با Django و Django REST Framework است که برای تمرین و پیاده‌سازی مفاهیم واقعی توسعه Backend ساخته شده است.
+### 🇮🇷 درباره پروژه
 
-در پروژه مفاهیمی مانند Custom User، احراز هویت JWT، CRUD، Pagination، مدیریت Article و Comment، مدیریت Advertisement و مستندسازی خودکار API پیاده‌سازی شده‌اند.
+یک REST API ساخته‌شده با Django و Django REST Framework که برای تمرین و پیاده‌سازی مفاهیم واقعی Backend توسعه داده شده است.
 
-## 🔥 امکانات
+## 🔥 Features | امکانات
 
-- 👤 Custom User Model
-- 🔐 احراز هویت JWT
-- 📝 مدیریت Article
-- 💬 مدیریت Comment
-- 📢 مدیریت Advertisement
-- 📄 Pagination
-- 🔄 عملیات CRUD
-- 📚 تولید خودکار OpenAPI Schema
-- 🧭 Swagger UI برای مشاهده و تست API
-- 🛡️ Authentication و Permission
+- 👤 Custom User Model — مدل کاربر اختصاصی
+- 🔐 JWT Authentication — احراز هویت JWT
+- 📝 Articles & Comments — مدیریت مقاله و نظر
+- 📢 Ads Module — مدیریت آگهی‌ها
+- 📄 Pagination — صفحه‌بندی نتایج
+- 🔄 CRUD — عملیات ایجاد، خواندن، ویرایش و حذف
+- 📚 OpenAPI Schema — تولید خودکار مستندات
+- 🧭 Swagger UI — مشاهده و تست API
+- 🛡️ Authentication & Permissions — احراز هویت و دسترسی‌ها
 
-## 🧰 تکنولوژی‌ها
+## 🧰 Tech Stack | تکنولوژی‌ها
 
-| تکنولوژی | کاربرد |
+| Technology | کاربرد |
 |---|---|
 | 🐍 Python 3.13 | زبان برنامه‌نویسی |
 | 🎯 Django 4.2 | Backend Framework |
@@ -41,74 +40,43 @@
 | 🧪 Swagger UI | مشاهده و تست API |
 | 🗄️ SQLite | پایگاه داده توسعه |
 
-## 📖 مستندات API
+## 📖 API Documentation | مستندات API
 
-پس از اجرای پروژه، مستندات تعاملی API در دسترس هستند:
+Raw OpenAPI schema:
 
 ```text
 /schema/
 ```
 
-و:
+Interactive Swagger UI:
 
 ```text
 /swagger/
 ```
 
-## ⚙️ نصب و اجرا
+## ⚙️ Installation | نصب و اجرا
 
 ```bash
 git clone https://github.com/ayobbarnva/drf_spectacular.git
 cd drf_spectacular
-```
-
-ساخت محیط مجازی:
-
-```bash
 python -m venv venv
 source venv/bin/activate
-```
-
-نصب وابستگی‌ها:
-
-```bash
 pip install -r requirements.txt
-```
-
-ساخت و اجرای Migration:
-
-```bash
 python manage.py makemigrations
 python manage.py migrate
-```
-
-ساخت Superuser:
-
-```bash
 python manage.py createsuperuser
-```
-
-اجرای سرور:
-
-```bash
 python manage.py runserver
 ```
 
-سپس API در آدرس زیر در دسترس خواهد بود:
+در ویندوز برای فعال‌سازی محیط مجازی از `venv\Scripts\activate` استفاده کنید.
 
-```text
-http://127.0.0.1:8000/
-```
+## 🔐 JWT Authentication | احراز هویت
 
-## 🔐 احراز هویت JWT
-
-برای دریافت Token:
+Get a token with:
 
 ```http
 POST /api/token/
 ```
-
-نمونه درخواست:
 
 ```json
 {
@@ -117,22 +85,24 @@ POST /api/token/
 }
 ```
 
-سپس Access Token را در Header ارسال کنید:
+Use the access token:
 
 ```http
-Authorization: Bearer <your_access_token>
+Authorization: Bearer <access_token>
 ```
 
-## 🎯 هدف پروژه
+برای درخواست‌های محافظت‌شده، Access Token را در Header بالا ارسال کنید.
 
-هدف پروژه، تمرین توسعه Backend، طراحی REST API، Authentication، Serializer، CRUD، Pagination و مستندسازی API با Django REST Framework است.
+## 🎯 Goal | هدف پروژه
 
-## 👨‍💻 سازنده
+This project is a practical exercise in Django REST API development, authentication, serializers, CRUD, pagination, and API documentation.
+
+هدف پروژه تمرین توسعه Backend، طراحی REST API، Authentication، Serializer، CRUD، Pagination و مستندسازی API است.
+
+## 👨‍💻 Author | سازنده
 
 **Ayoob Barnva** — [@ayobbarnva](https://github.com/ayobbarnva)
 
-⭐ اگر پروژه برایتان مفید بود، می‌توانید به Repository Star بدهید.
+⭐ If you find it useful, give the repository a star.
 
-## ⚠️ توجه
-
-این پروژه با هدف آموزشی و توسعه Backend ساخته شده است.
+⭐ اگر پروژه برایتان مفید بود، خوشحال می‌شوم به آن Star بدهید.
