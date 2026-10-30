@@ -104,3 +104,7 @@ This project is a practical exercise in Django REST API development, authenticat
 **Ayoob Barnva** — [@ayobbarnva](https://github.com/ayobbarnva)
 
 ⭐ If you find it useful, give the repository a star.
+
+## AI Usage Disclosure
+
+AI was used only to assist with writing and formatting this README. All source code and implementation were written by the author.
