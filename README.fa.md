@@ -85,3 +85,7 @@ Authorization: Bearer <access_token>
 **Ayoob Barnva** — [@ayobbarnva](https://github.com/ayobbarnva)
 
 ⭐ اگر پروژه برایتان مفید بود، به Repository Star بدهید.
+
+## توضیح درباره استفاده از هوش مصنوعی
+
+از هوش مصنوعی صرفاً برای کمک به نگارش و قالب‌بندی فایل README استفاده شده است. تمام کدهای منبع و پیاده‌سازی پروژه توسط خود نویسنده نوشته شده‌اند.
